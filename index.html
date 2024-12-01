@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekolojik Kredi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sol Kısım -->
+    <div class="left">
+      <img src="logo.png" alt="Logo" class="logo">
+      <h1>Ekolojik Kredi</h1>
+      <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+      <div id="menuContent" class="menu-content">
+        <a href="#" onclick="openSection('about')">Ekolojik Kredi Nedir?</a>
+        <a href="#" onclick="openSection('team')">Hazırlayanlar</a>
+      </div>
+    </div>
+
+    <!-- Sağ Kısım -->
+    <div class="right">
+      <button onclick="openSection('register')">Kayıt Ol</button>
+      <button onclick="openSection('viewData')">Veri Görme</button>
+      <button onclick="openSection('enterData')">Veri Giriş</button>
+    </div>
+  </div>
+
+  <!-- Kayıt Ol Formu -->
+  <div id="register" class="section">
+    <h2>Kayıt Ol</h2>
+    <form id="register-form">
+      <input type="text" id="name" placeholder="Ad" required>
+      <input type="text" id="surname" placeholder="Soyad" required>
+      <input type="email" id="email" placeholder="E-posta" required>
+      <input type="password" id="password" placeholder="Şifre" required>
+      <input type="text" id="school" placeholder="Okul" required>
+      <input type="text" id="city" placeholder="İl" required>
+      <input type="text" id="district" placeholder="İlçe" required>
+      <input type="text" id="school-number" placeholder="Okul Numarası" required>
+      <button type="submit">Kaydet</button>
+    </form>
+  </div>
+
+  <!-- Veri Görme Formu -->
+  <div id="viewData" class="section">
+    <h2>Veri Görme</h2>
+    <form id="view-data-form">
+      <input type="email" id="view-email" placeholder="E-posta" required>
+      <input type="password" id="view-password" placeholder="Şifre" required>
+      <button type="submit">Verileri Gör</button>
+    </form>
+    <div id="past-data"></div>
+  </div>
+
+  <!-- Veri Giriş Formu -->
+  <div id="enterData" class="section">
+    <h2>Veri Giriş</h2>
+    <form id="enter-data-form">
+      <input type="text" id="enter-school-number" placeholder="Okul Numarası" required>
+      <input type="text" id="waste-type" placeholder="Atık Türü (kağıt, plastik, cam, metal)" required>
+      <input type="number" id="waste-amount" placeholder="Atık Miktarı (kg)" required>
+      <button type="submit">Kaydet</button>
+    </form>
+    <div id="points"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
